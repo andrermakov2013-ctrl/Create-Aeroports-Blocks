@@ -15,7 +15,6 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.core.registries.Registries;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 @Mod(AeroportsBlocks.MOD_ID)
 public final class AeroportsBlocks {
