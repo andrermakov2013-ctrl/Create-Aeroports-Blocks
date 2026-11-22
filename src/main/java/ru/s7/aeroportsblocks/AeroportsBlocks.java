@@ -14,7 +14,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.core.registries.Registries;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod(AeroportsBlocks.MOD_ID)
 public final class AeroportsBlocks {
@@ -33,12 +32,35 @@ public final class AeroportsBlocks {
     public static final DeferredItem<BlockItem> RUNWAY_ASPHALT_ITEM =
             ITEMS.registerSimpleBlockItem("runway_asphalt", RUNWAY_ASPHALT);
 
+    public static final DeferredBlock<Block> RUNWAY_CENTERLINE =
+            BLOCKS.registerSimpleBlock("runway_centerline",
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE));
+    public static final DeferredItem<BlockItem> RUNWAY_CENTERLINE_ITEM =
+            ITEMS.registerSimpleBlockItem("runway_centerline", RUNWAY_CENTERLINE);
+
+    public static final DeferredBlock<Block> RUNWAY_EDGE_LINE =
+            BLOCKS.registerSimpleBlock("runway_edge_line",
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE));
+    public static final DeferredItem<BlockItem> RUNWAY_EDGE_LINE_ITEM =
+            ITEMS.registerSimpleBlockItem("runway_edge_line", RUNWAY_EDGE_LINE);
+
+    public static final DeferredBlock<Block> RUNWAY_THRESHOLD =
+            BLOCKS.registerSimpleBlock("runway_threshold",
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE));
+    public static final DeferredItem<BlockItem> RUNWAY_THRESHOLD_ITEM =
+            ITEMS.registerSimpleBlockItem("runway_threshold", RUNWAY_THRESHOLD);
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> AIRPORT_TAB =
             TABS.register("airport_blocks", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.aeroportsblocks"))
                     .withTabsBefore(CreativeModeTabs.BUILDING_BLOCKS)
                     .icon(() -> RUNWAY_ASPHALT_ITEM.get().getDefaultInstance())
-                    .displayItems((parameters, output) -> output.accept(RUNWAY_ASPHALT_ITEM.get()))
+                    .displayItems((parameters, output) -> {
+                        output.accept(RUNWAY_ASPHALT_ITEM.get());
+                        output.accept(RUNWAY_CENTERLINE_ITEM.get());
+                        output.accept(RUNWAY_EDGE_LINE_ITEM.get());
+                        output.accept(RUNWAY_THRESHOLD_ITEM.get());
+                    })
                     .build());
 
     public AeroportsBlocks(IEventBus modBus) {
