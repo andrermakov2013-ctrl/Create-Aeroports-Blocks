@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "asphalt": "minecraft:block/gray_concrete",
+    "paint": "minecraft:block/white_concrete",
+    "particle": "minecraft:block/gray_concrete"
+  },
+  "elements": [
+    { "from": [0, 0, 0], "to": [16, 16, 16], "faces": {
+      "down": {"texture":"#asphalt"}, "up": {"texture":"#asphalt"},
+      "north": {"texture":"#asphalt"}, "south": {"texture":"#asphalt"},
+      "west": {"texture":"#asphalt"}, "east": {"texture":"#asphalt"}
+    }},
+    { "from": [0, 15.9, 1], "to": [16, 16, 2], "faces": {"up": {"texture":"#paint"}}},
+    { "from": [0, 15.9, 4], "to": [16, 16, 5], "faces": {"up": {"texture":"#paint"}}},
+    { "from": [0, 15.9, 7], "to": [16, 16, 8], "faces": {"up": {"texture":"#paint"}}},
+    { "from": [0, 15.9, 10], "to": [16, 16, 11], "faces": {"up": {"texture":"#paint"}}},
+    { "from": [0, 15.9, 13], "to": [16, 16, 14], "faces": {"up": {"texture":"#paint"}}}
+  ]
+}
