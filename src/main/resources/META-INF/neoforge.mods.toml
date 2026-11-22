@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="aeroportsblocks"
+version="0.1.0"
+displayName="Create: Aeroports Blocks"
+authors="S7"
+description='''
+Airport building blocks and infrastructure for Minecraft 1.21.1.
+'''
+
+[[dependencies.aeroportsblocks]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.aeroportsblocks]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
