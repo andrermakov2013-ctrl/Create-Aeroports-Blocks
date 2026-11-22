@@ -1,4 +1,7 @@
 {
   "block.aeroportsblocks.runway_asphalt": "Асфальт ВПП",
+  "block.aeroportsblocks.runway_centerline": "Осевая линия ВПП",
+  "block.aeroportsblocks.runway_edge_line": "Краевые линии ВПП",
+  "block.aeroportsblocks.runway_threshold": "Порог ВПП",
   "itemGroup.aeroportsblocks": "Create: Aeroports Blocks"
 }
